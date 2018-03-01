@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+service DroneSimulation {
+  rpc registerDrone (RegisterRequest) returns (RegisterResponse) {}
+  rpc updateOnCords (UpdateCordsRequest) returns (UpdateCordsResponse) {}
+}
+
+message RegisterRequest {
+  string droneId = 1;
+}
+
+message RegisterResponse {
+  string droneId = 1;
+  string cords = 2;
+}
+
+message UpdateCordsRequest {
+    string droneId = 1;
+    string cords = 2;
+}
+
+message UpdateCordsResponse {
+
+}

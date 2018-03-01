@@ -1,1 +1,3 @@
 # Dancing_Drone_Simulator
+
+Implemented gRPC in python to create a simulator where Client-Server were in connection using Google Protobuf. Server withheld new and existing client membership details and getting user inputs for the whole client cluster movement and sending new coordinate to each client. Each client listens to new coordinates from the server where the server to client communication was one-way (gRPC) streaming. When user enters a new coordinate in the server window, the server will forward new coordinates to all clients and the cluster was moving accordingly.
