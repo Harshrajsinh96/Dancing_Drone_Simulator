@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Coordinates{
+    int32 x = 1;
+    int32 y = 2;
+    int32 z = 3;
+}
+
+message Droneid{
+    int32 id =1;
+}
+
+service DronePosition{
+    rpc registerClients(Droneid) returns (Droneid){}
+    rpc getPosition(Droneid) returns (stream Coordinates){}
+}
+
